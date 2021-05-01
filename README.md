@@ -16,11 +16,8 @@ This file contains code that uses Object-Relational Mapping that creates an E-Co
 ## Code Snippet
 ```javascript
 router.get('/', async (req, res) => {
-  // find all categories
-  // be sure to include its associated Products
   try {
     const categoryData = await Category.findAll( {
-      // JOIN with locations, using the Trip through table
       include: [{ model: Product }]
     });
 
@@ -43,7 +40,7 @@ router.get('/', async (req, res) => {
 ```
 
 ## Video
-
+https://drive.google.com/file/d/1Tr-OKamZf8HVG_QsNI0_sa1EOp9hj-QS/view
 
 ## Author Links 
 [LinkedIn](https://www.linkedin.com/in/rosario-miranda-b81170132/)<br />
